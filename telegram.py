@@ -7,7 +7,7 @@ TELEGRAM_API_TOKEN = "<YOUR_TELEGRAM_BOT_TOKEN>"
 def text_message(update, context):
     response = openai.ChatCompletion.create(
         model="gpt-3.5-turbo",
-        messages= [{"role": "system", "content": "Ass a silly phrase after each one of your answers"}]
+        messages= [{"role": "system", "content": "A silly phrase after each one of your answers"}]
     )
     update.message.reply_text(response["choices"][0]["message"]["content"])
 
